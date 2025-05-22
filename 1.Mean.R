@@ -3,7 +3,7 @@
 #     Video Title:Recognise Missing Data in a Dataset  in R
 #  Data File Used: 1.Data_File.csv
 #
-salesData <- read.csv(file = "72_Data_File.csv", header = TRUE, sep = ",")
+salesData <- read.csv(file = "1.Data_File.csv", header = TRUE, sep = ",")
 print(salesData)
 #
 # Calculate mean values of "Sales" and "Revenue" variables
