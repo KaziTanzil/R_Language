@@ -1,0 +1,20 @@
+
+#          Author: Kazi Tanzil
+#     Title: Calculate Correlation Coefficients in R
+#  Data File Used: 1.Data_File.csv
+#
+salesData <- read.csv(file = "1.Data_File.csv", header = TRUE, sep = ",")
+print(salesData)
+#
+# Check scatter plot of "Sales" vs "Revenue"
+plot(salesData$Sales, salesData$Revenue,
+     main = "Sales vs Revenue",
+     xlab = "Number of Sales", ylab = "Revenue ($)")
+#
+cor(salesData$Sales, salesData$Revenue)                       # Default
+cor(salesData$Sales, salesData$Revenue, method = "pearson")   # Same as Default
+#
+# Other correlation coefficients
+cor(salesData$Sales, salesData$Revenue, method = "kendall")   # Kendall's tau
+cor(salesData$Sales, salesData$Revenue, method = "spearman")  # Spearman Rank
+#
